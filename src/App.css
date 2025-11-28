@@ -1,0 +1,142 @@
+/* === GLOBAL STYLING === */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+  background-size: 300% 300%;
+  animation: gradientShift 10s ease infinite;
+  min-height: 100vh;
+  color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* === GRADIENT ANIMATION === */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* === CONTAINER === */
+.MuiContainer-root {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 90%;
+  max-width: 700px;
+  transition: all 0.4s ease-in-out;
+}
+
+.MuiContainer-root:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25);
+}
+
+/* === HEADER === */
+h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.8rem;
+  background: linear-gradient(90deg, #7b2ff7, #f107a3, #ff758c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* === TEXT FIELDS & FORM === */
+.MuiTextField-root,
+.MuiFormControl-root {
+  margin-bottom: 1.8rem;
+  width: 100%;
+}
+
+.MuiInputBase-root {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.MuiInputBase-root:hover {
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 10px rgba(123, 47, 247, 0.2);
+}
+
+/* === BUTTONS === */
+.MuiButton-contained {
+  background: linear-gradient(90deg, #7b2ff7, #f107a3);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.7rem 1.5rem;
+  border-radius: 12px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 12px rgba(241, 7, 163, 0.3);
+  transition: all 0.3s ease;
+}
+
+.MuiButton-contained:hover {
+  background: linear-gradient(90deg, #ff758c, #7b2ff7);
+  box-shadow: 0 8px 20px rgba(241, 7, 163, 0.4);
+  transform: scale(1.05);
+}
+
+/* === OUTLINED BUTTON === */
+.MuiButton-outlined {
+  border: 2px solid #7b2ff7;
+  color: #7b2ff7;
+  font-weight: 600;
+  padding: 0.6rem 1.5rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.MuiButton-outlined:hover {
+  background: rgba(123, 47, 247, 0.1);
+  color: #f107a3;
+  border-color: #f107a3;
+  transform: scale(1.05);
+}
+
+/* === CARD HOVER EFFECT === */
+.MuiCard-root {
+  transition: all 0.3s ease-in-out;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.MuiCard-root:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(123, 47, 247, 0.2);
+}
+
+/* === TEXT STYLING === */
+.MuiTypography-root {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  text-align: center;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2.1rem;
+  }
+
+  .MuiContainer-root {
+    padding: 1.5rem;
+  }
+
+  .MuiButton-contained, .MuiButton-outlined {
+    width: 100%;
+  }
+}
